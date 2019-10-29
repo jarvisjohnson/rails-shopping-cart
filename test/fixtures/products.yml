@@ -12,11 +12,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: 
+  name: 'One product'
   uuid: 1
   price: 9.99
 
 two:
-  name: 
-  uuid: 1
+  name: 'Some other product'
+  uuid: 2
   price: 9.99
