@@ -7,7 +7,7 @@
 - Products are imported via rake task `products:import_from_json`
 
 # Setup
-1. `rails db:setup`
-2. `rake products:import_from_json`
+1. start rails: `bundle install && rails db:setup`
+2. import products: `rake products:import_from_json`
 3. `rails s`
 4. basic tests: `rails test`

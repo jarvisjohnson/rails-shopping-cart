@@ -10,6 +10,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header><a href="/cart" class="count"><%= "Cart items: #{@cart.item_count}" %></a></header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

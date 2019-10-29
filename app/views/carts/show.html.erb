@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shopping Cart</h1>
+
+<table style="border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cart.line_items.each do |line_item| %>
+      <tr>
+        <td><%= line_item.product.name %></td>
+        <td><%= number_to_currency line_item.product.price %></td>
+        <td><%= line_item.quantity %></td>
+      </tr>
+    <% end %>
+    <tr></tr>
+  </tbody>
+  <tfoot>
+    <tr style="border-top: 1px solid black;">
+      <td>Total</td>
+      <td colspan=2><%= number_to_currency @cart.total %></td>
+    </tr>
+  </tfoot>
+</table>
+
+<br>
+<%= link_to 'View products', root_path %>
