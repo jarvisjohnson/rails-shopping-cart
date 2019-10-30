@@ -10,7 +10,11 @@
   </head>
 
   <body>
-    <header><a href="/shopping_cart" class="count"><%= "Cart (#{@cart.item_count})" %></a></header>
+    <header>
+      <a href="/shopping_cart" class="count" id="count">
+        <%= render(partial: "layouts/cart_count")%>
+      </a>
+    </header>
     <main>
       <%= yield %>
     </main>

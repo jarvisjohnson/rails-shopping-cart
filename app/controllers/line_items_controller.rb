@@ -34,6 +34,7 @@ class LineItemsController < ApplicationController
       if @line_item.save
         format.html { redirect_to shopping_cart_path, notice: "Product #{product.name} added to cart." }
         format.json { render :show, status: :created, location: @line_item }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @line_item.errors, status: :unprocessable_entity }
